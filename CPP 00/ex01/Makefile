@@ -5,32 +5,38 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hmanilow <hmanilow@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/02 21:32:33 by hmanilow          #+#    #+#              #
-#    Updated: 2022/11/02 21:32:40 by hmanilow         ###   ########.fr        #
+#    Created: 2022/11/02 21:33:32 by hmanilow          #+#    #+#              #
+#    Updated: 2022/11/02 21:33:35 by hmanilow         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= megaphone
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CC			= c++
+RM			= rm -f
+OBJ			= ${SRC:.cpp=.o}
+SRC			= main.cpp \
+			  PhoneBook.cpp \
+			  Contact.cpp \
 
-SRCS	= megaphone.cpp
+INC			= PhoneBook.hpp \
+			  Contact.hpp \
 
-OBJS 	= $(SRCS:.cpp=.o)
+NAME		= phonebook
 
-CC 		= c++
-RM		= rm -rf
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
+${NAME}:	${OBJ}
+					${CC} ${CFLAGS} ${OBJ} -o $@
 
-all:	$(NAME)
+%.o:%.cpp ${INC}
+					${CC} ${CFLAGS} -c $< -o $@
 
-%.o:    %.cpp
-	@$(CC) $(CFLAGS) -c $< -o $@
+all:			${NAME}
 
-$(NAME):	$(OBJS)
-	@$(CC) $(OBJS) -o $(NAME)
 clean:
-	@$(RM) $(OBJS)
+					${RM} ${OBJ}
 
-fclean: clean
-	@$(RM) $(NAME)
+fclean:		clean
+					${RM} ${NAME}
 
-re:	fclean $(NAME)
+re: 			fclean all
+
+.PHONY : 	all clean fclean re
