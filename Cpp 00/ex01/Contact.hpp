@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hmanilow <hmanilow@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/03 19:58:39 by hmanilow          #+#    #+#             */
+/*   Updated: 2022/11/03 19:58:41 by hmanilow         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CPP_MODULE_CONTACT_HPP
 #define CPP_MODULE_CONTACT_HPP
 
@@ -7,7 +19,9 @@ class Contact
 {
 	public:
 		Contact();
-		//~Contact();
+		~Contact(){
+			std::cout << "Class isnt working" << std::endl;
+		};
 		int	getIndex();
 		std::string getFName();
 		std::string getLName();

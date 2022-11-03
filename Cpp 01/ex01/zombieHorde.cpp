@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmanilow <hmanilow@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 19:58:47 by hmanilow          #+#    #+#             */
-/*   Updated: 2022/11/03 19:58:50 by hmanilow         ###   ########.fr       */
+/*   Created: 2022/11/03 20:00:05 by hmanilow          #+#    #+#             */
+/*   Updated: 2022/11/03 20:00:07 by hmanilow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CPP_MODULE_PHONEBOOK_HPP
-#define CPP_MODULE_PHONEBOOK_HPP
-#include "Contact.hpp"
+#include "Zombie.h"
 
-class PhoneBook
+Zombie *zombieHorde(int n, std::string name)
 {
-	private:
-		Contact	contacts[8];
-		int 	ind;
-	public:
-		PhoneBook();
-		~PhoneBook(){
-			std::cout << "Class isnt working" << std::endl;
-		};
-		void	add();
-		void	search();
-		void	view(int n);
-		void	ft_info(int i);
-};
-
-
-#endif
+	Zombie *gang = new Zombie[n];
+	for(int i = 0; i < n; i++)
+		gang[i].createName(name);
+	return gang;
+}

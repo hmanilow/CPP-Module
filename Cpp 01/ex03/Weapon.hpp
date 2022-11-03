@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmanilow <hmanilow@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 19:58:47 by hmanilow          #+#    #+#             */
-/*   Updated: 2022/11/03 19:58:50 by hmanilow         ###   ########.fr       */
+/*   Created: 2022/11/03 20:00:50 by hmanilow          #+#    #+#             */
+/*   Updated: 2022/11/03 20:00:52 by hmanilow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CPP_MODULE_PHONEBOOK_HPP
-#define CPP_MODULE_PHONEBOOK_HPP
-#include "Contact.hpp"
+#ifndef CPP_MODULE_WEAPON_HPP
+#define CPP_MODULE_WEAPON_HPP
 
-class PhoneBook
+#include <iostream>
+
+class Weapon
 {
-	private:
-		Contact	contacts[8];
-		int 	ind;
 	public:
-		PhoneBook();
-		~PhoneBook(){
-			std::cout << "Class isnt working" << std::endl;
-		};
-		void	add();
-		void	search();
-		void	view(int n);
-		void	ft_info(int i);
+		Weapon(std::string type);
+		~Weapon();
+		void setType(std::string type);
+		std::string getType();
+	private:
+		std::string type;
 };
 
 

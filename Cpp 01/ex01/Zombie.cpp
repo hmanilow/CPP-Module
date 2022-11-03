@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmanilow <hmanilow@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 19:58:47 by hmanilow          #+#    #+#             */
-/*   Updated: 2022/11/03 19:58:50 by hmanilow         ###   ########.fr       */
+/*   Created: 2022/11/03 19:59:53 by hmanilow          #+#    #+#             */
+/*   Updated: 2022/11/03 19:59:55 by hmanilow         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CPP_MODULE_PHONEBOOK_HPP
-#define CPP_MODULE_PHONEBOOK_HPP
-#include "Contact.hpp"
+#include "Zombie.hpp"
 
-class PhoneBook
+Zombie::Zombie() {}
+
+Zombie::~Zombie()
 {
-	private:
-		Contact	contacts[8];
-		int 	ind;
-	public:
-		PhoneBook();
-		~PhoneBook(){
-			std::cout << "Class isnt working" << std::endl;
-		};
-		void	add();
-		void	search();
-		void	view(int n);
-		void	ft_info(int i);
-};
+	std::cout << "Deleted " << this->Name << std ::endl;
+}
 
+void Zombie::createName(std::string name)
+{
+	this->Name = name;
+}
 
-#endif
+void Zombie::announce()
+{
+	std::cout << showName();
+	std::cout << ": BraiiiiiiinnnzzzZ" << std::endl;
+}
+
+std::string Zombie::showName()
+{
+	return this->Name;
+}
