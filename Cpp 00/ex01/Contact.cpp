@@ -14,7 +14,7 @@
 
 Contact::Contact() {}
 
-Contact::~Contact(){}
+//Contact::~Contact(){}
 
 int Contact::getIndex()
 {

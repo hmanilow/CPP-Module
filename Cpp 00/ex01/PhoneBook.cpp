@@ -18,7 +18,7 @@ PhoneBook::PhoneBook()
 	ind = 0;
 }
 
-PhoneBook::~PhoneBook(){}
+//PhoneBook::~PhoneBook(){}
 
 static void ft_empty(std::string s)
 {
@@ -31,7 +31,7 @@ static void ft_empty(std::string s)
 
 void PhoneBook::add()
 {
-	int i = 0;
+	static int i = 0;
 	std::string s;
 
 	std::cout << "Index of new contact" << i + 1 << std::endl;

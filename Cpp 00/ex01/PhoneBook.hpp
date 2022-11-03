@@ -9,7 +9,7 @@ class PhoneBook
 		int 	ind;
 	public:
 		PhoneBook();
-		~PhoneBook();
+		//~PhoneBook();
 		void	add();
 		void	search();
 		void	view(int n);

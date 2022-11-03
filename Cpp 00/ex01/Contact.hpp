@@ -7,7 +7,7 @@ class Contact
 {
 	public:
 		Contact();
-		~Contact();
+		//~Contact();
 		int	getIndex();
 		std::string getFName();
 		std::string getLName();
