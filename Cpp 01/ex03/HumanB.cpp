@@ -11,3 +11,21 @@
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
+
+HumanB::HumanB(std::string name)
+{
+	this->name = name;
+	gun = NULL;
+}
+
+HumanB::~HumanB() {}
+
+void HumanB::setWeapon(Weapon &gun)
+{
+	this->gun = &gun;
+}
+
+void HumanB::attack()
+{
+	std::cout << this->name << " made an attack by " << gun->getType() << std::endl;
+}

@@ -13,9 +13,18 @@
 #ifndef CPP_MODULE_HUMANB_HPP
 #define CPP_MODULE_HUMANB_HPP
 
+#include "Weapon.hpp"
 
-class HumanB {
-
+class HumanB
+{
+	public:
+		HumanB(std::string name);
+		~HumanB();
+		void setWeapon(Weapon &gun);
+		void attack();
+	private:
+		std::string name;
+		Weapon *gun;
 };
 
 
