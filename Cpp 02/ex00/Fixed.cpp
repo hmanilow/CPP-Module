@@ -39,7 +39,7 @@ Fixed& Fixed::operator=(const Fixed &yep)
 
 int Fixed::getRawBits() const
 {
-	std::cout << "get raw bits" << std::endl;
+	std::cout << "get Raw Bits" << std::endl;
 	return this->val;
 }
 
