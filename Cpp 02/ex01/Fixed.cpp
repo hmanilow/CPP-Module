@@ -51,7 +51,6 @@ Fixed& Fixed::operator=(const Fixed &yep)
 
 int Fixed::getRawBits() const
 {
-	//std::cout << "get raw bits" << std::endl;
 	return this->valueF;
 }
 
