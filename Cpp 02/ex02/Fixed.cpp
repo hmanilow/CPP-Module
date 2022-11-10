@@ -35,7 +35,7 @@ Fixed::Fixed(const float val)
 	valueF = roundf(val * (1 << bits));
 }
 
-//math
+// math
 
 float Fixed::operator+ (Fixed fixed) const
 {
