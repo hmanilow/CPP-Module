@@ -143,4 +143,4 @@ NOTE 2 : Exercises of Module 08 has no Makefile so you need to compile the using
 
 # 🔑 Execute
 
-NOTE: After Making the Exercise You will find an Executable file (some exercises need more argument so check if they need it or not).
+NOTE: After Making the Exercise You will find an Executable file (some exercises need more argument so check if they need it or not) .
